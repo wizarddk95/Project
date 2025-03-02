@@ -9,8 +9,6 @@ import time
 import pandas as pd
 from tqdm import tqdm
 
-
-
 # 1. 웹 드라이버 실행
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("https://www.wanted.co.kr")
