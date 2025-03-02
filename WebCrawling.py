@@ -1,4 +1,5 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -8,8 +9,10 @@ import time
 import pandas as pd
 from tqdm import tqdm
 
+
+
 # 1. 웹 드라이버 실행
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("https://www.wanted.co.kr")
 
 
