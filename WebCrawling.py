@@ -1,5 +1,4 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -9,8 +8,21 @@ import time
 import pandas as pd
 from tqdm import tqdm
 
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+
+# Chrome 옵션 설정 (헤드리스 모드)
+chrome_options = Options()
+chrome_options.add_argument("--headless")  # UI 없이 실행
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
+
+# ChromeDriver 설정 및 실행
+service = Service(ChromeDriverManager().install())  # Service 객체 사용
+driver = webdriver.Chrome(service=service, options=chrome_options)
+
 # 1. 웹 드라이버 실행
-driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("https://www.wanted.co.kr")
 
 
