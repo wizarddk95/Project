@@ -3,7 +3,7 @@ from google.oauth2 import service_account
 from google.cloud import bigquery
 
 # 서비스 계정 키 파일 경로 (내려받은 JSON 키 파일 사용)
-KEY_PATH = "./api/micro-harbor-452405-k1-761e112889d5.json"
+KEY_PATH = ""
 
 # BigQuery 데이터셋 ID
 DATASET_ID = "mydataset"
