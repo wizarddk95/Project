@@ -14,7 +14,7 @@ from selenium.webdriver.chrome.options import Options
 
 # Chrome 옵션 설정 (헤드리스 모드)
 chrome_options = Options()
-chrome_options.add_argument("--headless")  # UI 없이 실행
+# chrome_options.add_argument("--headless")  # UI 없이 실행
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--disable-blink-features=AutomationControlled")  # Selenium 감지 방지
