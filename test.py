@@ -27,3 +27,5 @@ driver.get("https://www.wanted.co.kr")
 wait = WebDriverWait(driver, 10) # 10초가 지나도 요소가 나타나지 않으면 오류 발생
 dd = driver.page_source
 print(dd)
+
+# dd
