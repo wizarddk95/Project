@@ -37,5 +37,7 @@ def upload_to_bigquery(file_path, table_id):
         print(f"{file_path} 데이터 업로드 실패: {e}")
 
 # 업로드 실행
-upload_to_bigquery("job_information.csv", 'job_information')
-upload_to_bigquery("wrod_statistics.csv", 'word_statistics')
+# upload_to_bigquery("job_information.csv", 'job_information')
+# upload_to_bigquery("wrod_statistics.csv", 'word_statistics')
+
+upload_to_bigquery("news_summary.csv", 'news_summary')
