@@ -29,9 +29,23 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 # 1. 웹 드라이버 실행
 driver.get("https://www.wanted.co.kr")
 
-
 # 2. WebDriverWait 설정
 wait = WebDriverWait(driver, 10) # 10초가 지나도 요소가 나타나지 않으면 오류 발생
+
+# 2.5 버튼 닫기
+close_xpath = '/html/body/div[2]/div/div/button'
+
+try:
+    close_button = wait.until(EC.element_to_be_clickable((By.XPATH, close_xpath)))
+    close_button.click()
+except:
+    print("기본 클릭 실패, ActionsChains 사용")
+
+    try:
+        menu_button = driver.find_element(By.XPATH, close_xpath)
+        ActionChains(driver).move_to_element(close_button).click().perform()
+    except Exception as e:
+        print(f"ActionChians 클릭 실패: {e}")
 
 # 3. 네비게이터 검색 버튼 클릭
 menu_xpath = '//*[@id="__next"]/div[1]/div[2]/nav/aside/ul/li[1]/button'
