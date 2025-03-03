@@ -40,4 +40,5 @@ def upload_to_bigquery(file_path, table_id):
 # upload_to_bigquery("job_information.csv", 'job_information')
 # upload_to_bigquery("wrod_statistics.csv", 'word_statistics')
 
+# 뉴스 크롤링 GCP 업로드 
 upload_to_bigquery("news_summary.csv", 'news_summary')
