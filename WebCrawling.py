@@ -19,8 +19,8 @@ chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--disable-blink-features=AutomationControlled")  # Selenium 감지 방지
 chrome_options.add_argument("--remote-debugging-port=9222")  # 디버깅 활성화
-chrome_options.add_argument("--window-size=1920x1080")  # 창 크기 지정
-chrome_options.add_argument("--start-maximized")  # 창 최대화
+# chrome_options.add_argument("--window-size=1920x1080")  # 창 크기 지정
+# chrome_options.add_argument("--start-maximized")  # 창 최대화
 
 # ChromeDriver 설정 및 실행
 service = Service(ChromeDriverManager().install())  # Service 객체 사용
